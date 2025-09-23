@@ -1,0 +1,124 @@
+body {
+
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height :1.5;
+    color:rgb(225, 231, 36);
+    text-shadow: 1px 1px rgb(240, 198, 91);
+    background: rgb(71, 53, 129) url(background.jpg) center/cover fixed;
+
+}
+
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    background: rgb(30, 40, 62)
+}
+
+.intro {
+    text-align: center;
+    margin-top: 0.5rem;
+    max-width: 750px;
+    background: rgb(53, 38, 102);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgb(33, 16, 88);
+    
+}
+
+.headshot {
+    width:160px;
+    height:160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0.5rem auto 0.25rem;
+}
+
+a {
+    color: rgb(225, 231, 36);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: rgb(229, 65, 65);
+    text-decoration: underline;
+    outline-offset: 2px;
+}
+
+.assignments {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.assignments th{
+    padding: 0.5rem 0.8rem;
+    border: 3px solid rgb(155, 134, 29);
+}
+
+.assignments td {
+    padding: 0.5rem 0.8rem;
+    border: 3px solid rgb(92, 80, 105);
+}
+
+.assignments thead th {
+    background:rgb(97, 106, 44);
+    text-align: left;
+}
+
+.assignments td:hover{
+    outline: 2px solid rgb(216, 30, 30);
+    outline-offset: -2px;
+}
+
+.assignments tbody tr:nth-child(odd) {background: rgb(92, 77, 108);}
+.assignments tbody tr:nth-child(even) {background: rgb(134, 80, 139);}
+
+.cards {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.card {
+    background: rgb(83, 41, 110);
+    border-radius: 10px;
+    padding: 1.8rem 1.25rem;
+    border: 1px solid rgb(120, 59, 173);
+}
+
+.card h3 {
+    margin-top: 0.2rem;
+    margin-bottom: 0.6rem;
+    color:rgb(115, 109, 147);
+}
+
+.card ul, .card ol {
+    margin:0;
+    padding-left: 1.2rem;
+    list-style: disc;
+}
+
+.quote{
+    margin: 1rem 0;
+    padding: 1rem 1.25rem;
+    background: rgb(130, 87, 137);
+    border-left: 4px solid rgb(129, 78, 177);
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgb(33, 16, 88);
+}
+
+.keyterm {
+    color:rgb(255, 238, 5);
+    font-weight: 700;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.80rem;
+    padding: 1rem 0 0.5rem;
+}
