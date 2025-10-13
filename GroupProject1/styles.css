@@ -1,0 +1,56 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F2FFF8;
+}
+
+.table{
+    background: linear-gradient(rgba(1, 128, 81, 1) 0%, rgba(18, 184, 98, 1) 59%);
+}
+
+
+.table{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dealer{
+    background-color: #204F44;
+    border-radius: 20px;
+    border: 5px solid #F2FFF8;
+    padding: 20px;
+    width: 60%;
+    height: 30%;
+    
+}
+
+.gap{
+    justify-content: center;
+    background-color: #204F44;
+    width: 100%;
+    padding: 20px;
+
+
+}
+
+.players{
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p1{
+    margin: 25px;
+    padding: 25px;
+}
+
+.p2{
+    margin: 25px;
+    padding: 25px;
+}
+
+.p3{
+    margin: 25px;
+    padding: 25px;
+}
