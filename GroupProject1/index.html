@@ -1,58 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Group Assignment demo</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Blackjack — Card Dealer Demo</title>
 </head>
 <body>
-    
-    <div class="table">
-        <div class="dealer">
-            <img class="deck" src="images/DECK.png" alt="Deck of cards">
-            <img class="chips" src="images/chips.png" alt="Pile of chips">
-        </div>
 
-        <div class="gap">
-
-            <div class="dealer-spot">
-                <img class="blank" src="images/card_blank.png" alt="">
-                <img class="blank" src="images/card_blank.png" alt="">
-            </div>
-            
-        </div>
-        
-        <div class="players">
-            <div class="p1">
-                <img src="images/p1.png" alt="player 1">
-
-                <div class="deal-spot">
-                    <img class="blank" src="images/card_blank.png" alt="">
-                    <img class="blank" src="images/card_blank.png" alt="">
-                </div>
-
-            </div>
-            <div class="p2">
-                <img src="images/p2.png" alt="player 2">
-
-                <div class="deal-spot">
-                    <img class="blank" src="images/card_blank.png" alt="">
-                    <img class="blank" src="images/card_blank.png" alt="">
-                </div>
-
-            </div>
-            <div class="p3">
-                <img src="images/p3.png" alt="player 3">
-
-                <div class="deal-spot">
-                    <img class="blank" src="images/card_blank.png" alt="">
-                    <img class="blank" src="images/card_blank.png" alt="">
-                </div>
-                
-            </div>
-        </div>
+  <!-- HOME -->
+  <section id="home" class="screen screen--home">
+    <div class="home-card">
+      <h1 class="title">Blackjack</h1>
+      <a class="btn-start" href="#table" aria-label="Start the Blackjack dealer demo">Start</a>
+      <span class="suit tl" aria-hidden="true">♠</span>
+      <span class="suit br" aria-hidden="true">♠</span>
     </div>
+  </section>
+
+  <!-- TABLE SCREEN -->
+  <section id="table" class="screen screen--table">
+    <header class="topbar">
+      <a class="link" href="#home">Home</a>
+      <div class="topbar-title">Blackjack Dealer </div>
+      <!-- Reload page to reset any future animations -->
+      <a class="link" href="#">Restart</a>
+    </header>
+
+    <div class="table">
+
+        <img class="ace card" src="images/card_a.png" alt="">
+
+        <img class="four card" src="images/card_4.png" alt="">
+
+        <img class="five card" src="images/card_5.png" alt="">
+
+        <img  class="six card" src="images/card_6.png" alt="">
+
+        <img class="seven card" src="images/card_7.png" alt="">
+
+        <img class="ten card" src="images/card_10.png" alt="">
+
+        <img class="jack card" src="images/card_j.png" alt="">
+
+        <img class="king card" src="images/card_k.png" alt="">
+
+
+      <div class="dealer">
+        <!--<h1>Dealer section</h1>-->
+          <div class="winner">
+            <img src="images/winner.png" alt="The deack cards are dealt from.">
+          </div>
+
+          <div class="deck1" >
+            <img src="images/DECK.png" alt="The deack cards are dealt from.">
+          </div>
+          <div class="deck2" >
+            <img src="images/DECK.png" alt="The deack cards are dealt from.">
+          </div>
+
+          <div class="chip">
+            <img src="images/chips.png" alt="">
+          </div>
+      </div>
+
+      <div class="gap" aria-hidden="true"></div>
+
+      <div class="players">
+        <div class="p1"><h3>Player 1</h3></div>
+        <div class="p2"><h3>Player 2</h3></div>
+        <div class="p3"><h3>Player 3</h3></div>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
