@@ -225,11 +225,24 @@ body{
   right: 520px;
 }
 
-.chip{
+.chip {
   position: absolute;
   top: 10%;
-  left: 30%;
+  left: 310px;
+  z-index: 10; /* make sure it appears on top of the cards */
 }
+
+.chip img {
+  width: 220px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.chip img:hover {
+  transform: scale(1.2) rotate(10deg);
+  filter: drop-shadow(0 0 12px gold);
+}
+
 
 .deck1 > img{
   width: 140px;
@@ -266,6 +279,7 @@ body{
   animation-delay: 1.6s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  
 }
 
 .four{
@@ -387,7 +401,7 @@ body{
     transform: translateX(0px) translateY(0px);
   }
   to{
-    transform: translateX(-340px) translateY(0px);
+    transform: translateX(-340px) translateY(-30px);
   }
 }
 
@@ -396,7 +410,7 @@ body{
     transform: translateX(0px) translateY(0px);
   }
   to{
-    transform: translateX(-190px) translateY(0px);
+    transform: translateX(-190px) translateY(-30px);
   }
 
 }
@@ -406,7 +420,7 @@ body{
     transform: translateX(0px) translateY(0px);
   }
   to{
-    transform: translateX(-720px) translateY(370px);
+    transform: translateX(-620px) translateY(370px);
   }
 }
 
@@ -415,7 +429,7 @@ from{
     transform: translateX(0px) translateY(0px);
   }
   to{
-    transform: translateX(-570px) translateY(370px);
+    transform: translateX(-450px) translateY(370px);
   }
 }
 
@@ -424,7 +438,7 @@ from{
     transform: translateX(0px) translateY(0px);
   }
   to{
-    transform: translateX(-190px) translateY(370px);
+    transform: translateX(-250px) translateY(370px);
   }
 }
 
@@ -433,7 +447,7 @@ from{
     transform: translateX(0px) translateY(0px);
   }
   to{
-    transform: translateX(-340px) translateY(370px);
+    transform: translateX(-70px) translateY(370px);
   }
 }
 
@@ -442,7 +456,7 @@ from{
     transform: translateX(0px) translateY(0px);
   }
   to{
-    transform: translateX(20px) translateY(370px);
+    transform: translateX(120px) translateY(370px);
   }
 }
 
@@ -451,7 +465,7 @@ from{
     transform: translateX(0px) translateY(0px);
   }
   to{
-    transform: translateX(170px) translateY(370px);
+    transform: translateX(300px) translateY(370px);
   }
 }
 
