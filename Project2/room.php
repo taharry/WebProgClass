@@ -12,11 +12,11 @@ $message = '';
 $error = '';
 $used_hint = false;
 
-// Handle form submit (answer + hint)
+//Handle form submit (answer + hint)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $era = $_POST['era'];
 
-    // Hint button
+    //Hint button
     if (isset($_POST['hint'])) {
         // reduce score for hint
         $_SESSION['game']['score'] -= 5;
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $game = $_SESSION['game'];
 
-// Simple text for each era – replace with your environmental story
+//Simple text for each era replace with  environmental story
 function get_era_title($era) {
     switch ($era) {
         case 'past':    return 'The Past – Forgotten Vault Chamber';
@@ -97,7 +97,7 @@ function get_era_description($era) {
         </div>
     </form>
 
-    <!-- Hint text placeholder (you can make it change based on $used_hint) -->
+    <!-- Hint text placeholder -->
     <?php if ($used_hint): ?>
         <div class="hint-box">
             <p><strong>Hint:</strong> Replace this text with a real hint for the <?php echo htmlspecialchars($era); ?> puzzle.</p>
@@ -108,3 +108,4 @@ function get_era_description($era) {
 </section>
 
 <?php include 'footer.php'; ?>
+
