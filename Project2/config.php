@@ -21,10 +21,9 @@ function all_rooms_solved() {
 // Placeholder puzzle answers change these to  real puzzles
 function get_correct_answer($era) {
     switch ($era) {
-        case 'present': return 'PRESENTCODE';
-        case 'past':    return 'PASTRELIC';
-        case 'future':  return 'FUTUREKEY';
+        case 'present': return 'PRESENT';
+        case 'past':    return 'CALCULATOR';
+        case 'future':  return 'CAVE MAN';
         default:        return '';
     }
 }
-

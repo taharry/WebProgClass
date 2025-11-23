@@ -53,21 +53,53 @@ function get_era_title($era) {
 function get_era_description($era) {
     switch ($era) {
         case 'past':
-            return 'Ancient gears and dusty relics surround you. Inscriptions hint at a code that was once used to seal the vault.';
+            return 'You travel to the past  to find a source of the paradox. <br>The Time Machines doors open to reveal a cave covered in vivid paintings of the local wildlife. You must be in the prehistoric era!<br> The object causing the disturbance must be nearby...';
         case 'present':
-            return 'Screens flicker, alarms pulse. You must decode the current security override before time fractures.';
+            return 'Screens flicker, alarms pulse.<br> The time machine has become unstable due to a time paradox and threatans reality itsself!<br> You must decode the current security override before time fractures!';
         case 'future':
-            return 'The corridor hums with energy. A quantum lock reads a code that hasn’t technically existed yet.';
+            return 'You have solved the paradox in the past, yet the timeline is still unstable. <br>You travel to the future just incase something from the past was misplaced there. <br>This lobby in a sleek futuristic office building looks promising!';
         default:
             return '';
     }
 }
+
+// changes hint depending on the era
+function get_hint($era) {
+    switch ($era) {
+        case 'present': 
+            return 'abc equals 123';
+        case 'past':    
+            return 'search for a device that does not belong';
+        case 'future':  
+            return 'what looks out of place here?';
+        default:        return '';
+    }
+}
+//gets source for image file depending on the room and era
+function get_src($era) {
+    switch ($era) {
+        case 'present': 
+            return 'present.png';
+        case 'past':    
+            return 'past.png';
+        case 'future':  
+            return 'future.png';
+        default:        return '';
+    }
+}
+
 ?>
+
+
 <?php include 'header.php'; ?>
 
 <section class="room-section era-<?php echo htmlspecialchars($era); ?>">
     <h2><?php echo get_era_title($era); ?></h2>
     <p class="room-description"><?php echo get_era_description($era); ?></p>
+
+    <div class= "location">
+        <img src="<?php echo get_src($era) ?>" alt="">
+    </div>
 
     <div class="room-status">
         <p><strong>Status:</strong>
@@ -100,7 +132,7 @@ function get_era_description($era) {
     <!-- Hint text placeholder -->
     <?php if ($used_hint): ?>
         <div class="hint-box">
-            <p><strong>Hint:</strong> Replace this text with a real hint for the <?php echo htmlspecialchars($era); ?> puzzle.</p>
+            <p><strong>Hint:<?php echo get_hint($era); ?></strong> Replace this text with a real hint for the <?php echo htmlspecialchars($era); ?> puzzle.</p>
         </div>
     <?php endif; ?>
 
